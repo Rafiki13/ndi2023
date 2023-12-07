@@ -8,8 +8,12 @@ const currentScore = ref(0);
 </script>
 
 <template>
-    <h1>Score: {{ currentScore }}</h1>
-    <QuizBlock @update-score="currentScore += $event"/>    <div class="wrapper">
+  <EarthElementList/>
+
+  <h1>Score: {{ currentScore }}</h1>
+    <QuizBlock @update-score="currentScore += $event"/>
+
+  <div class="wrapper">
         <div class="left-side inventoryGUI_item">
 
         </div>
@@ -18,7 +22,6 @@ const currentScore = ref(0);
         </div>
     </div>
 
-  <EarthElementList/>
 </template>
 
 <style scoped>

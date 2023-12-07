@@ -18,5 +18,6 @@ defineProps<{
   img {
     height: 80px;
     width: 80px;
+    cursor: pointer;
   }
 </style>

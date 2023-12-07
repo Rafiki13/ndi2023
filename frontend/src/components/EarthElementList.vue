@@ -30,8 +30,8 @@ function retirerDescription(){
 </script>
 
 <template>
-  <div id="popup">
-
+  <div id="popup_container" class="inventoryGUI">
+    <div id="popup" class="inventoryGUI_item">
     <!-- TODO : faire en sorte que la croix mette la fenetre en petit-->
     <button id="cross">X</button>
 
@@ -45,19 +45,28 @@ function retirerDescription(){
         <SpriteElement v-model="sprite.fichier" @afficher-description="afficherDescription(sprite.id)"/>
       </li>
     </ul>
-
+    </div>
   </div>
 </template>
 
 <style scoped>
-  #cross {
-    position: relative;
-    top: 10px;
-    left: 10px;
+  #sprites {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  #sprites li {
+    list-style-type: none;
   }
 
   #popup {
-    background-color: lightgray;
+    background-image: url("./src/assets/img/img.png");
+    background-position: center center;
+    background-size: cover;
   }
 
+  #popup_container {
+    aspect-ratio: 3.2;
+    width: 300px;
+  }
 </style>
