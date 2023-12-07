@@ -4,10 +4,12 @@ import { ref } from 'vue';
 
 const currentScore = ref(0);
 
+import Earth from "@/views/Earth.vue";
 </script>
 
 <template>
-    <h1>Score: {{ currentScore }}</h1>
+  <earth></earth>
+  <h1>Score: {{ currentScore }}</h1>
     <QuizBlock @update-score="currentScore += $event"/>    <div class="wrapper">
         <div class="left-side inventoryGUI_item">
 
