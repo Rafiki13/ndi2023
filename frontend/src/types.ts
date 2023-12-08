@@ -1,7 +1,9 @@
 export interface Answer {
     content: string,
     isCorrect: boolean,
-    textIfSelected: string
+    textIfSelected: string,
+    imageName: string,
+    spriteName: string
 }
 
 export interface Question {

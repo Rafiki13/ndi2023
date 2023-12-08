@@ -3,7 +3,7 @@ import type { Answer, Question } from '@/types';
 import { computed, ref, type Ref } from 'vue';
 import questionsJSON from '@/assets/questions.json';
 
-const emit = defineEmits(['updateScore', 'outOfQuestions']);
+const emit = defineEmits(['updateScore', 'outOfQuestions', 'emitNewSprite']);
 
 const wasAnswerCorrect: Ref<boolean> = ref(false);
 const selectedAnswer: Ref<Answer | null> = ref(null);
@@ -19,6 +19,9 @@ const answerQuestion = (answer: Answer) => {
     selectedAnswer.value = answer;
     wasAnswerCorrect.value = answer.isCorrect;
     emit('updateScore', wasAnswerCorrect.value ? question?.value.pointsIfCorrect : question?.value.pointsIfWrong);
+    if(answer.imageName) {
+        emit('emitNewSprite', answer.imageName, answer.spriteName);
+    }
 };
 
 const nextQuestion = () => {
