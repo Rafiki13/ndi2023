@@ -42,7 +42,7 @@ const answerQuestion = (answer: Answer) => {
                 <img class="question-image" v-if="question.imageSrc" :src="question.imageSrc" />
             </div>
         </div>
-
+ 
         <div class="lower-half">
             <div v-if="!selectedAnswer" class="answers">
                 <div v-for="answer in question.possibleAnswers" :key="answer.content" class="answer inventoryGUI"
@@ -69,6 +69,7 @@ const answerQuestion = (answer: Answer) => {
     justify-content: stretch;
     align-items: center;
     height: 100%;
+    gap: 20px;
 }
 
 .upper-half {
@@ -104,6 +105,12 @@ const answerQuestion = (answer: Answer) => {
     width: 80%;
 }
 
+@media (max-width: 768px) {
+    .answers {
+        grid-template-columns: 1fr;
+    }
+}
+
 .answer {
     width: 90%;
     text-align: center;
@@ -125,6 +132,7 @@ const answerQuestion = (answer: Answer) => {
 .question {
     width: 80%;
     text-align: center;
+    padding: 10px;
 }
 
 .question-image {
@@ -139,6 +147,7 @@ const answerQuestion = (answer: Answer) => {
     align-items: center;
     gap: 20px;
     width: 80%;
+    padding: 10px;
 }
 
 .correct {
