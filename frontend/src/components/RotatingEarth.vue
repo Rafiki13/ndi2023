@@ -35,5 +35,6 @@
     margin: 25%;
     width: 50%;
     aspect-ratio: 1;
+    image-rendering: pixelated;
   }
 </style>
