@@ -42,12 +42,12 @@ const sprites: Ref<Sprite[]> = ref([
 }
 
 #rotatingContainer {
-  /*animation-duration: 20s;
+  animation-duration: 20s;
   animation-name: rotate;
   animation-iteration-count: infinite;
   animation-direction: normal;
   transform-origin: center;
-  animation-timing-function: linear;*/
+  animation-timing-function: linear;
 
     position: relative;
     width: 300px;
