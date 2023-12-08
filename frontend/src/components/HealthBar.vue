@@ -1,30 +1,20 @@
 <script setup lang="ts">
 
 import type {Ref} from "vue";
-import {ref} from "vue";
+import {ref, watch, computed} from "vue";
 
-let score : Ref<number> = ref(100);
 
-function hit(nbPointsPerdus:number){
-  if(score.value!=0){
-    if((score.value-nbPointsPerdus)>0){
-      score.value -= nbPointsPerdus;
-    }else if((score.value-nbPointsPerdus)<=0){
-      score.value=0;
-    }
+const props = defineProps({
+  score: {
+    type: Number,
+    default: 100
   }
-}
+})
 
-function heal(nbPointsGagnes:number){
-  if(score.value<100){
-    if((score.value+ nbPointsGagnes)<100){
-      score.value += nbPointsGagnes;
-
-    }else if((score.value+ nbPointsGagnes)>=100){
-      score.value=100;
-    }
-  }
-}
+const displayScore = computed(() => {
+  return props.score < 0 ? 0 :
+   props.score > 100 ? 100 : props.score
+})
 
 </script>
 
@@ -32,9 +22,9 @@ function heal(nbPointsGagnes:number){
   <div class="health-box">
 
 
-    <div id="health-bar-red" :style="'width:' + score + '%;'"></div>
-    <div id="health-bar-blue" :style="'width:' + score + '%;'"></div>
-    <div id="health-bar" :style="'width:' + score + '%;'"></div>
+    <div id="health-bar-red" :style="'width:' + displayScore + '%;'"></div>
+    <div id="health-bar-blue" :style="'width:' + displayScore + '%;'"></div>
+    <div id="health-bar" :style="'width:' + displayScore + '%;'"></div>
     <div class="carre" id="carre-1"></div>
     <div class="carre" id="carre-2"></div>
     <div class="carre" id="carre-3"></div>
@@ -42,14 +32,13 @@ function heal(nbPointsGagnes:number){
     <div class="barre" id="barre-1"></div>
     <div class="barre" id="barre-2"></div>
   </div>
-  <div id="aa" v-on:click="hit(10)"></div>
-  <div id="ab" v-on:click="heal(15)"></div>
+
 </template>
 
 <style scoped>
 .health-box{
   position: relative;
-  background-color: green;
+  background-color: gray;
   height: 30px;
   width: 400px;
   margin: 0 auto;
@@ -60,7 +49,7 @@ function heal(nbPointsGagnes:number){
 }
 
 #health-bar {
-  background-color: red;
+  background-color: green;
   height: 30px;
   position: absolute; top:0; left:0;
   transition-property: width;
@@ -68,7 +57,7 @@ function heal(nbPointsGagnes:number){
 }
 
 #health-bar-red{
-  background-color: #7a0606;
+  background-color: yellow;
   height: 30px;
   position: absolute; top:0; left:0;
   transition-property: width;
@@ -77,7 +66,7 @@ function heal(nbPointsGagnes:number){
 }
 
 #health-bar-blue{
-  background-color: greenyellow;
+  background-color: darkgreen;
   height: 30px;
   position: absolute; top:0; left:0;
   transition-property: width;
