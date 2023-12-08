@@ -138,10 +138,8 @@ function quitFullScreen() {
     align-items: center;
 
     > img {
-      width: auto;
-      height: auto;
-      max-width: 80%;
-      max-height: 80%;
+      width: 80%;
+      height: 80%;
     }
   }
 
