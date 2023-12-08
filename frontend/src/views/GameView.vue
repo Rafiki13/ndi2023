@@ -14,7 +14,7 @@ const currentScore = ref(50);
         <div class="left-side inventoryGUI_item">
             <HealthBar :score="currentScore" />
             <Earth />
-            <!-- <earth-element-list></earth-element-list> -->
+            <earth-element-list></earth-element-list>
         </div>
         <div class="right-side inventoryGUI_item">
             <QuizBlock @update-score="currentScore = Math.min(Math.max(currentScore + $event, 0), 100);" />
