@@ -2,7 +2,7 @@
   width:calc(100% - 20px);
   height:fit-content;
   border:10px solid;
-  border-image-source:url("../img/minecraftGUI/inventoryGUI.png");
+  border-image-source:url("../img/minecraftGUI/inventoryGUIgreen.png");
   image-rendering: pixelated;
   border-image-slice: 5;
   z-index:1;
@@ -13,7 +13,7 @@
   &::after{
     display:block;
     content:"";
-    background-color:#262626;
+    background-color:#2E352E;
     position:absolute;
     top:0;
     left:0;
@@ -28,7 +28,7 @@
     border:2px solid;
     border-image-source:url("../img/minecraftGUI/inventoryGUI_item.png");
     border-image-slice:2;
-    background-color: #1C1C1C;
+    background-color: #192019;
     padding: 2px 3px;
     color:white;
     outline: none;

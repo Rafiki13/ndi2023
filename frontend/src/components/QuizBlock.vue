@@ -151,10 +151,14 @@ const answerQuestion = (answer: Answer) => {
 }
 
 .correct {
-    filter: sepia(1) hue-rotate(70deg);
+  border-image-source:url("../assets/img/minecraftGUI/succesGUI.png") !important;
+  background-color:#518650;
+
+
 }
 
 .wrong {
-    filter: sepia(1) hue-rotate(310deg);
+  border-image-source:url("../assets/img/minecraftGUI/errorGUI.png") !important;
+  background-color:#B13838;
 }
 </style>
