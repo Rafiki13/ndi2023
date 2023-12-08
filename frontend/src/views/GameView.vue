@@ -25,9 +25,9 @@ const finishGame = () => {
 
 let id = 0;
 
-function addSprite(fichier: string, nom: string) {
+function addSprite(fichier: string, nom: string, description: string) {
   spritesEarthList.value.push({
-    id: id, nom: nom, fichier: fichier, description: "", height: 50, marginBottom: 3
+    id: id, nom: nom, fichier: fichier, description: description, height: 50, marginBottom: 3
   });
   spritesRotatingEarth.value.push({
   id: id, fichier: fichier, height: 50, marginBottom: 5
@@ -47,7 +47,7 @@ function addSprite(fichier: string, nom: string) {
         </div>
         <div class="right-side inventoryGUI_item">
             <QuizBlock @update-score="currentScore = Math.min(Math.max(currentScore + $event, 0), 100);"
-                @out-of-questions="finishGame" @emitNewSprite="(v1, v2) => addSprite(v1, v2)"/>
+                @out-of-questions="finishGame" @emitNewSprite="(fichier, nom, description) => addSprite(fichier, nom, description)"/>
         </div>
     </div>
 </template>

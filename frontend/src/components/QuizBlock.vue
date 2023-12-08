@@ -20,7 +20,7 @@ const answerQuestion = (answer: Answer) => {
     wasAnswerCorrect.value = answer.isCorrect;
     emit('updateScore', wasAnswerCorrect.value ? question?.value.pointsIfCorrect : question?.value.pointsIfWrong);
     if(answer.imageName) {
-        emit('emitNewSprite', answer.imageName, answer.spriteName);
+        emit('emitNewSprite', answer.imageName, answer.spriteName, answer.description);
     }
 };
 

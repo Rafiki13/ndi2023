@@ -3,7 +3,8 @@ export interface Answer {
     isCorrect: boolean,
     textIfSelected: string,
     imageName: string,
-    spriteName: string
+    spriteName: string,
+    description: string
 }
 
 export interface Question {
