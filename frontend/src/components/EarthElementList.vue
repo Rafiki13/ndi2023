@@ -21,7 +21,7 @@ const actualSprite = ref();
 const isFullScreen: Ref<boolean> = ref(false);
 
 function afficherDescription(spriteId: number) {
-  actualSprite.value = sprites.value[spriteId]
+  actualSprite.value = this.props.sprites[spriteId];
   isFullScreen.value = true;
 }
 
