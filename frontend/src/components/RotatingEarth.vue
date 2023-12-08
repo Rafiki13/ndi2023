@@ -3,11 +3,9 @@
 </script>
 
 <template>
-  <div id="staticContainer">
     <div id="rotatingContainer">
       <img src="../assets/img/sprits/earth.png" alt="earth" id="earth" />
     </div>
-  </div>
 </template>
 
 <style scoped lang="scss">
@@ -21,14 +19,8 @@
   }
 }
 
-#staticContainer {
-  width: 100%;
-  height: 100%;
-  position: relative;
-}
-
 #rotatingContainer {
-  position: absolute;
+
   animation-duration: 20s;
   animation-name: rotate;
   animation-iteration-count: infinite;
@@ -38,6 +30,14 @@
 
   width: 500px;
   height: 500px;
+}
+
+@media screen and (max-height: 800px) {
+  #rotatingContainer {
+    width: 380px;
+    height: 380px;
+  }
+  
 }
 
 #earth {
