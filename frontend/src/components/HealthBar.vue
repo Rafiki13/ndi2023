@@ -45,7 +45,7 @@ const displayScore = computed(() => {
   border: solid 2px black;
   border-top-width: 8px;
   border-bottom-width: 8px;
-  z-index: -2;
+  z-index: 1;
 }
 
 #health-bar {
