@@ -38,7 +38,7 @@ const displayScore = computed(() => {
 <style scoped>
 .health-box{
   position: relative;
-  background-color: gray;
+  background-color: darkred;
   height: 30px;
   width: 400px;
   margin: 0 auto;
@@ -58,7 +58,7 @@ const displayScore = computed(() => {
 }
 
 #health-bar-red{
-  background-color: yellow;
+  background-color: orange;
   height: 30px;
   position: absolute; top:0; left:0;
   transition-property: width;
@@ -67,7 +67,7 @@ const displayScore = computed(() => {
 }
 
 #health-bar-blue{
-  background-color: darkgreen;
+  background-color: limegreen;
   height: 30px;
   position: absolute; top:0; left:0;
   transition-property: width;
