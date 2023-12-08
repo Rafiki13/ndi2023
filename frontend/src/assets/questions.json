@@ -11,23 +11,25 @@
           "content": "Le nucléaire",
           "isCorrect": false,
           "textIfSelected": "Incorrect! La bonne réponse est le charbon, tuant 24.6 personnes par TWh produit. Le pétrole est proche, tuant 18.4 personnes par TWh produit. Le nucléaire, quant à lui, tue 0.03 personnes par TWh produit, et est relativement beaucoup plus sûr.",
-          "imageSrc": "nuclear.png"
+          "imageName": "nuclear.png"
        },
         {
           "content": "Le charbon",
           "isCorrect": true,
           "textIfSelected": "Correct! Le charbon tue 24.6 personnes par TWh produit. Le pétrole est proche, tuant 18.4 personnes par TWh produit. Le nucléaire, quant à lui, tue 0.03 personnes par TWh produit, et est relativement beaucoup plus sûr.",
-          "imageSrc": "charcoal.png"
+          "imageName": "charcoal.png"
         },
         {
           "content": "Le gaz",
           "isCorrect": false,
-          "textIfSelected": "Incorrect! La bonne réponse est le charbon, tuant 24.6 personnes par TWh produit. Le pétrole est proche, tuant 18.4 personnes par TWh produit. Le gaz, quant à lui, tue 2.8 personnes par TWh produit, tandis que le nucléaire tue 0.03 personnes par TWh produit, et est relativement beaucoup plus sûr."
+          "textIfSelected": "Incorrect! La bonne réponse est le charbon, tuant 24.6 personnes par TWh produit. Le pétrole est proche, tuant 18.4 personnes par TWh produit. Le gaz, quant à lui, tue 2.8 personnes par TWh produit, tandis que le nucléaire tue 0.03 personnes par TWh produit, et est relativement beaucoup plus sûr.",
+          "imageName": "gaz.png"
         },
         {
           "content": "Le pétrole",
           "isCorrect": false,
-          "textIfSelected": "Presque! La bonne réponse est le charbon, tuant 24.6 personnes par TWh produit. Le pétrole est proche, tuant 18.4 personnes par TWh produit. Le nucléaire, quant à lui, tue 0.03 personnes par TWh produit, et est relativement beaucoup plus sûr."
+          "textIfSelected": "Presque! La bonne réponse est le charbon, tuant 24.6 personnes par TWh produit. Le pétrole est proche, tuant 18.4 personnes par TWh produit. Le nucléaire, quant à lui, tue 0.03 personnes par TWh produit, et est relativement beaucoup plus sûr.",
+          "imageName": "petrole.png"
         }
       ]
     },
@@ -52,75 +54,58 @@
     },
     {
       "theme": "Solutions pour le climat",
-
       "content": "Ce sont les petits gestes quotidiens qui peuvent nous sortir de la crise écologique",
-
       "imageSrc": "",
-
       "pointsIfCorrect": 10,
-
       "pointsIfWrong": -10,
-
       "possibleAnswers": [
         {
           "content": "Vrai",
-
           "isCorrect": false,
-
           "textIfSelected": "Malheureusement, non. On dit souvent que si chacun de nous faisait un geste pour la planète, multiplié par 8 milliards d’individus cela aurait un impact positif global. Ce type de raisonnement pousse à penser que l’on pourrait « changer le monde » en se contentant de petits gestes écologiques. Ce n'est pas malheureusement pas le cas, un changement d'ordre sociétal est nécessaire, et une transformation de nos pratiques agricoles, industrielles et énergétiques."
         },
 
         {
           "content": "Faux",
-
           "isCorrect": true,
-
           "textIfSelected": "Correct! On dit souvent que si chacun de nous faisait un geste pour la planète, multiplié par 8 milliards d’individus cela aurait un impact positif global. Ce type de raisonnement pousse à penser que l’on pourrait « changer le monde » en se contentant de petits gestes écologiques. Ce n'est pas malheureusement pas le cas, un changement d'ordre sociétal est nécessaire, et une transformation de nos pratiques agricoles, industrielles et énergétiques."
         }
       ]
     },
     {
       "theme": "Moyens de transport",
-
       "content": "Quel moyen de transport a un impact peu important sur le climat ?",
-
       "imageSrc": "",
-
       "pointsIfCorrect": 10,
-
       "pointsIfWrong": -10,
-
       "possibleAnswers": [
         {
           "content": "Voiture",
-
           "isCorrect": false,
-
-          "textIfSelected": "Non, la voiture est un moyen de transport très polluant, et qui est responsable de 20% des émissions de gaz à effet de serre en France. La voiture électrique n'est pas non plus une solution, car l'électricité consommée n'est pas forcément verte, et la fabrication des batteries est très polluante."
+          "textIfSelected": "Non, la voiture est un moyen de transport très polluant, et qui est responsable de 20% des émissions de gaz à effet de serre en France. La voiture électrique n'est pas non plus une solution, car l'électricité consommée n'est pas forcément verte, et la fabrication des batteries est très polluante.",
+          "imageName": "normal_car.png"
         },
 
         {
           "content": "Voiture électrique",
-
           "isCorrect": false,
+          "textIfSelected": "Non, la voiture électrique n'est pas un remplacement adéquat à la voiture thermique, car l'électricité consommée n'est pas forcément verte, et la fabrication des batteries est très polluante.",
+          "imageName": "electric_car.png"
 
-          "textIfSelected": "Non, la voiture électrique n'est pas un remplacement adéquat à la voiture thermique, car l'électricité consommée n'est pas forcément verte, et la fabrication des batteries est très polluante."
         },
 
         {
           "content": "Transports en commun",
-
           "isCorrect": true,
-
-          "textIfSelected": "En effet, les transports en commun sont un moyen de transport peu polluant, qui permet de réduire les émissions de gaz à effet de serre."
+          "textIfSelected": "En effet, les transports en commun sont un moyen de transport peu polluant, qui permet de réduire les émissions de gaz à effet de serre.",
+          "imageName": "tram.png"
         },
 
         {
           "content": "Vélo",
-
           "isCorrect": true,
-
-          "textIfSelected": "En effet, le vélo est un moyen de transport peu polluant, qui permet de réduire les émissions de gaz à effet de serre. Il est cependant impossible à utiliser dans certaines situations, et est très bien complémenté par les transports en commun."
+          "textIfSelected": "En effet, le vélo est un moyen de transport peu polluant, qui permet de réduire les émissions de gaz à effet de serre. Il est cependant impossible à utiliser dans certaines situations, et est très bien complémenté par les transports en commun.",
+          "imageName": "velo.png"
         }
       ]
     },
