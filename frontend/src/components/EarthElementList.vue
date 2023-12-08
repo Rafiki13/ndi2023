@@ -46,9 +46,13 @@ function quitFullScreen() {
 
       <div v-if="actualSprite && isFullScreen" id="popupInfos" class="inventoryGUI">
         <img src="../assets/img/minecraftGUI/cross.png" alt="close description" @click="retirerDescription" class="cross"/>
-        <div id="icon-container" class="inventoryGUI_item">
-          <img :src="'./src/assets/img/' + actualSprite.fichier" alt="">
+        <div>
+          <div id="icon-container" class="inventoryGUI_item">
+            <img :src="'./src/assets/img/' + actualSprite.fichier" alt="">
+          </div>
+          <h2>{{ actualSprite.nom }}</h2>
         </div>
+
         <p>{{ actualSprite.description }}</p>
       </div>
 
@@ -107,7 +111,16 @@ function quitFullScreen() {
   left: 10px;
   width: calc(100% - 70px);
 
-  > #icon-container{
+  > div {
+    display:flex;
+    align-items: center;
+
+    h2 {
+      margin-left: 10px;
+    }
+  }
+
+  #icon-container{
     width: 80px;
     aspect-ratio: 1;
     display:flex;
@@ -120,6 +133,10 @@ function quitFullScreen() {
       max-width: 80%;
       max-height: 80%;
     }
+  }
+
+  p {
+    margin : 5px 10px;
   }
 }
 </style>
