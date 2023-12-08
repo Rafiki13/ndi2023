@@ -60,9 +60,10 @@ function retirerDescription(){
   }
 
   #popup {
-    background-image: url("./src/assets/img/img.png");
+    background-image: url("./src/assets/img/background.png");
+    background-repeat: repeat-x;
     background-position: center center;
-    background-size: cover;
+    background-size: contain;
   }
 
   #popup_container {
