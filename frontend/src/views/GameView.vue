@@ -3,6 +3,7 @@ import QuizBlock from '@/components/QuizBlock.vue';
 import Earth from "@/components/RotatingEarth.vue";
 import HealthBar from "@/components/HealthBar.vue";
 import { ref } from 'vue';
+import EarthElementList from "@/components/EarthElementList.vue";
 
 const currentScore = ref(0);
 
@@ -13,7 +14,7 @@ const currentScore = ref(0);
         <div class="left-side inventoryGUI_item">
             <HealthBar :score="currentScore" />
             <Earth />
-
+            <earth-element-list></earth-element-list>
         </div>
         <div class="right-side inventoryGUI_item">
             <QuizBlock @update-score="currentScore = Math.min(Math.max(currentScore + $event, 0), 100);" />
@@ -36,7 +37,7 @@ const currentScore = ref(0);
     flex-direction: column;
     justify-content: stretch;
     align-items: center;
-    padding: 45px;
+    padding: 10px;
 }
 
 .right-side {

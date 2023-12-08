@@ -85,12 +85,13 @@ function quitFullScreen() {
   background-position: center center;
   background-size: contain;
   position: relative;
-  height: 100%;
+  height: calc(100% - 10px);
 }
 
 #popup_container {
+  width: 480px;
+  height: calc(500px / 3.2);
   aspect-ratio: 3.2;
-  width: 300px;
 }
 
 .cross {
@@ -104,7 +105,14 @@ function quitFullScreen() {
 }
 
 .fullscreen_popup {
-  width: 80vw !important;
+  width: calc(100vw - 40px) !important;
+  max-height: calc(100vh - 40px);
+  height: auto !important;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  translate: -50% -50%;
+  z-index: 3 !important;
 }
 
 #popupInfos {
