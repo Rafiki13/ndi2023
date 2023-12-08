@@ -8,7 +8,7 @@ let id = 0;
 // TODO : automatiser les sprites à utiliser lors des réponses de l'utilisateur
 const sprites: Ref<Sprite[]> = ref([
   {id: id++, nom: "Arbre", fichier: "tree.png", description: "arbre", height: 50, marginBottom: 3},
-  {id: id++, nom: "Usine", fichier: "factory.png", description: "usine", height: 50, marginBottom:  7.6}
+  {id: id++, nom: "Usine", fichier: "factory.png", description: "usine", height: 50, marginBottom: 7.6}
 ]);
 
 interface Sprite {
@@ -44,10 +44,11 @@ function quitFullScreen() {
   <div id="popup_container" :class="{inventoryGUI: true, fullscreen_popup: isFullScreen}">
     <div id="popup" class="inventoryGUI_item">
       <img src="../assets/img/minecraftGUI/cross.png" alt="close pop-up"
-           :class="{cross: true, hide_cross: !isFullScreen}" @click="quitFullScreen()"/>
+           :class="{cross: true, hide: !isFullScreen}" @click="quitFullScreen()"/>
 
       <div v-if="actualSprite && isFullScreen" id="popupInfos" class="inventoryGUI">
-        <img src="../assets/img/minecraftGUI/cross.png" alt="close description" @click="retirerDescription" class="cross"/>
+        <img src="../assets/img/minecraftGUI/cross.png" alt="close description" @click="retirerDescription"
+             class="cross"/>
         <div>
           <div id="icon-container" class="inventoryGUI_item">
             <img :src="'./src/assets/img/sprits/' + actualSprite.fichier" alt="">
@@ -59,12 +60,14 @@ function quitFullScreen() {
       </div>
 
       <ul id="sprites">
-        <li v-for="sprite in sprites" :key="sprite.id" :style="`height: ${sprite.height}%; margin-bottom: ${sprite.marginBottom}%;`">
+        <li v-for="sprite in sprites" :key="sprite.id"
+            :style="`height: ${sprite.height}%; margin-bottom: ${sprite.marginBottom}%;`">
           <SpriteElement v-model="sprite.fichier" @afficher-description="afficherDescription(sprite.id)"/>
         </li>
       </ul>
     </div>
   </div>
+  <div id="filler" :class="{hide: !isFullScreen}"></div>
 </template>
 
 <style scoped lang="scss">
@@ -100,7 +103,7 @@ function quitFullScreen() {
   top: 5px;
 }
 
-.hide_cross {
+.hide {
   display: none;
 }
 
@@ -122,7 +125,7 @@ function quitFullScreen() {
   width: calc(100% - 70px);
 
   > div {
-    display:flex;
+    display: flex;
     align-items: center;
 
     h2 {
@@ -130,10 +133,10 @@ function quitFullScreen() {
     }
   }
 
-  #icon-container{
+  #icon-container {
     width: 80px;
     aspect-ratio: 1;
-    display:flex;
+    display: flex;
     justify-content: center;
     align-items: center;
 
@@ -144,7 +147,11 @@ function quitFullScreen() {
   }
 
   p {
-    margin : 5px 10px;
+    margin: 5px 10px;
   }
+}
+
+#filler {
+  height: calc(500px / 3.2);
 }
 </style>

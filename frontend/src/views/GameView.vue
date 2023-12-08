@@ -35,7 +35,7 @@ const currentScore = ref(0);
     flex: 3;
     display: flex;
     flex-direction: column;
-    justify-content: stretch;
+    justify-content: space-between;
     align-items: center;
     padding: 10px;
 }
