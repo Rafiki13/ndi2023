@@ -15,7 +15,7 @@ function redirect(): void {
     <h1>Bienvenue à EcoQuizz !</h1>
     <div class="hori">
       <div class="vert earth">
-        <RotatingEarth></RotatingEarth>
+        <RotatingEarth :sprites="[]"></RotatingEarth>
       </div>
       <div class="vert">
         <p> Bienvenue à Ecoquizz ! Un jeu écolo sur un thème 100% écolo !</p>

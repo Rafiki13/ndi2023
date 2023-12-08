@@ -2,33 +2,18 @@
 import QuizBlock from '@/components/QuizBlock.vue';
 import Earth from "@/components/RotatingEarth.vue";
 import HealthBar from "@/components/HealthBar.vue";
-import {Ref, ref, watch} from 'vue';
+import {type Ref, ref, watch} from 'vue';
 import EarthElementList from "@/components/EarthElementList.vue";
 import router from '@/router';
-
-interface RotatingEarthSprite {
-  id: number;
-  fichier: string;
-  height: number;
-  marginBottom: number;
-}
-
-interface EarthListSprite {
-  id: number;
-  nom: string;
-  fichier: string;
-  description: string;
-  height: number;
-  marginBottom: number;
-}
+import {type RotatingEarthSprite, type EarthListSprite} from '@/types'
 
 
-const spritesRotatingEarth: Ref<RotatingEarthSprite> = ref([
+const spritesRotatingEarth: Ref<RotatingEarthSprite[]> = ref([
   {id: 0, nom: "Arbre", fichier: "tree.png", description: "arbre", height: 50, marginBottom: 7.6},
   {id: 1, nom: "Usine", fichier: "tree.png", description: "arbre", height: 50, marginBottom: 7.6},
   {id: 2, nom: "Usine", fichier: "tree.png", description: "arbre", height: 50, marginBottom: 5}
 ]);
-const spritesEarthList: Ref<EarthListSprite> = ref([
+const spritesEarthList: Ref<EarthListSprite[]> = ref([
   {id: 0, nom: "Arbre", fichier: "tree.png", description: "arbre", height: 50, marginBottom: 3},
   {id: 1, nom: "Usine", fichier: "tree.png", description: "usine", height: 50, marginBottom: 7.6}
 ]);

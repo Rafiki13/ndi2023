@@ -14,3 +14,19 @@ export interface Question {
     pointsIfCorrect: number,
     pointsIfWrong: number
 }
+
+export interface RotatingEarthSprite {
+    id: number;
+    fichier: string;
+    height: number;
+    marginBottom: number;
+}
+
+export interface EarthListSprite {
+    id: number;
+    nom: string;
+    fichier: string;
+    description: string;
+    height: number;
+    marginBottom: number;
+}

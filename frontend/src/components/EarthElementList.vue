@@ -2,26 +2,19 @@
 import {ref} from 'vue';
 import type {Ref} from 'vue';
 import SpriteElement from "@/components/SpriteElement.vue";
+import {type EarthListSprite} from '@/types'
+
 
 let id = 0;
 
-const props = defineProps<{sprites: Ref<Sprite[]>}>();
+const props = defineProps<{sprites: EarthListSprite[]}>();
 
-interface Sprite {
-  id: number;
-  nom: string;
-  fichier: string;
-  description: string;
-  height: number;
-  marginBottom: number;
-}
-
-const actualSprite = ref();
+const actualSprite: any = ref();
 
 const isFullScreen: Ref<boolean> = ref(false);
 
 function afficherDescription(spriteId: number) {
-  actualSprite.value = this.props.sprites[spriteId];
+  actualSprite.value = props.sprites[spriteId];
   isFullScreen.value = true;
 }
 

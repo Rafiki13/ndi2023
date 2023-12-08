@@ -1,14 +1,11 @@
 <script setup lang="ts">
 import {ref, type Ref} from "vue";
+import {type RotatingEarthSprite} from '@/types'
 
-const props = defineProps<{sprites: Ref<Sprite[]>}>();
 
-interface Sprite {
-  id: number;
-  fichier: string;
-  height: number;
-  marginBottom: number;
-}
+const props = defineProps<{sprites: RotatingEarthSprite[]}>();
+
+
 let id = 0;
 
 </script>
