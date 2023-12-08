@@ -5,11 +5,7 @@ import SpriteElement from "@/components/SpriteElement.vue";
 
 let id = 0;
 
-// TODO : automatiser les sprites à utiliser lors des réponses de l'utilisateur
-const sprites: Ref<Sprite[]> = ref([
-  {id: id++, nom: "Arbre", fichier: "tree.png", description: "arbre", height: 50, marginBottom: 3},
-  {id: id++, nom: "Usine", fichier: "factory.png", description: "usine", height: 50, marginBottom: 7.6}
-]);
+const props = defineProps<{sprites: Ref<Sprite[]>}>();
 
 interface Sprite {
   id: number;

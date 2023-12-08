@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import {ref, type Ref} from "vue";
 
+const props = defineProps<{sprites: Ref<Sprite[]>}>();
+
 interface Sprite {
   id: number;
   fichier: string;
@@ -8,12 +10,6 @@ interface Sprite {
   marginBottom: number;
 }
 let id = 0;
-
-const sprites: Ref<Sprite[]> = ref([
-  {id: id++, nom: "Arbre", fichier: "tree.png", description: "arbre", height: 50, marginBottom: 7.6},
-  {id: id++, nom: "Usine", fichier: "tree.png", description: "arbre", height: 50, marginBottom: 7.6},
-  {id: id++, nom: "Usine", fichier: "tree.png", description: "arbre", height: 50, marginBottom: 5}
-]);
 
 </script>
 
@@ -24,7 +20,7 @@ const sprites: Ref<Sprite[]> = ref([
     <img v-for="sprite in sprites"
          :key="sprite.id"
          :src="`./src/assets/img/sprits/${sprite.fichier}`"
-         :style="`height: ${sprite.height}px; top: ${50 - (sprite.marginBottom * 2)}px; transform-origin: center ${125 - (sprite.marginBottom * 2)}px; transform: translateX(-50%) rotate(${(sprite.id * 360)/ id}deg);`"
+         :style="`height: ${sprite.height}px; top: ${50 - (sprite.marginBottom * 2)}px; transform-origin: center ${125 - (sprite.marginBottom * 2)}px; transform: translateX(-50%) rotate(${(sprite.id * 360)/ sprites.length}deg);`"
          class="sprite"
          />
   </div>
