@@ -10,12 +10,14 @@
         {
           "content": "Le nucléaire",
           "isCorrect": false,
-          "textIfSelected": "Incorrect! La bonne réponse est le charbon, tuant 24.6 personnes par TWh produit. Le pétrole est proche, tuant 18.4 personnes par TWh produit. Le nucléaire, quant à lui, tue 0.03 personnes par TWh produit, et est relativement beaucoup plus sûr."
-        },
+          "textIfSelected": "Incorrect! La bonne réponse est le charbon, tuant 24.6 personnes par TWh produit. Le pétrole est proche, tuant 18.4 personnes par TWh produit. Le nucléaire, quant à lui, tue 0.03 personnes par TWh produit, et est relativement beaucoup plus sûr.",
+          "imageSrc": "nuclear.png"
+       },
         {
           "content": "Le charbon",
           "isCorrect": true,
-          "textIfSelected": "Correct! Le charbon tue 24.6 personnes par TWh produit. Le pétrole est proche, tuant 18.4 personnes par TWh produit. Le nucléaire, quant à lui, tue 0.03 personnes par TWh produit, et est relativement beaucoup plus sûr."
+          "textIfSelected": "Correct! Le charbon tue 24.6 personnes par TWh produit. Le pétrole est proche, tuant 18.4 personnes par TWh produit. Le nucléaire, quant à lui, tue 0.03 personnes par TWh produit, et est relativement beaucoup plus sûr.",
+          "imageSrc": "charcoal.png"
         },
         {
           "content": "Le gaz",
