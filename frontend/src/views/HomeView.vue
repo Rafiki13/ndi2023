@@ -18,7 +18,7 @@ function redirect(): void{
       <p> Bienvenue à Ecoquizz ! Un jeu écolo sur un thème 100% écolo !</p>
       <p>Dans ce quizz, vous allez découvrir ou redécouvrir les principaux thèmes autour du Changement Climatique.
       Au menu : questions à choix multiples, vrai ou faux et bien d'autres !</p>
-      <p>Votre but sera alros de rendre la planète, que vous voyez au-dessus, la plus saine possible en répondant juste aux questions !</p>
+      <p>Votre but sera alors de rendre la planète, que vous voyez au-dessus, la plus saine possible en répondant juste aux questions !</p>
       <p>Bonne chance à vous !</p>
       <RouterLink class="answer inventoryGUI"  to="/jeu"> Démarrer le jeu !</RouterLink>
     </div>
