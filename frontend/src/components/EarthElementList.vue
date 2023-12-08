@@ -20,14 +20,20 @@ interface Sprite {
 
 const actualSprite = ref();
 
-const isFullScreen: Ref<boolean> = ref(true);
+const isFullScreen: Ref<boolean> = ref(false);
 
 function afficherDescription(spriteId: number) {
   actualSprite.value = sprites.value[spriteId]
+  isFullScreen.value = true;
 }
 
 function retirerDescription() {
   actualSprite.value = null
+}
+
+function quitFullScreen() {
+  isFullScreen.value = false;
+  retirerDescription();
 }
 
 </script>
@@ -35,12 +41,15 @@ function retirerDescription() {
 <template>
   <div id="popup_container" :class="{inventoryGUI: true, fullscreen_popup: isFullScreen}">
     <div id="popup" class="inventoryGUI_item">
-      <!-- TODO : faire en sorte que la croix mette la fenetre en petit-->
-      <img src="../assets/img/minecraftGUI/cross.png" alt="close pop-up" :class="{cross: true, hide_cross: !isFullScreen}" @click="isFullScreen = !isFullScreen"/>
+      <img src="../assets/img/minecraftGUI/cross.png" alt="close pop-up"
+           :class="{cross: true, hide_cross: !isFullScreen}" @click="quitFullScreen()"/>
 
-      <div v-if="actualSprite">
-        <button @click="retirerDescription">X</button>
-        {{ actualSprite.description }}
+      <div v-if="actualSprite && isFullScreen" id="popupInfos" class="inventoryGUI">
+        <img src="../assets/img/minecraftGUI/cross.png" alt="close description" @click="retirerDescription" class="cross"/>
+        <div id="icon-container" class="inventoryGUI_item">
+          <img :src="'./src/assets/img/' + actualSprite.fichier" alt="">
+        </div>
+        <p>{{ actualSprite.description }}</p>
       </div>
 
       <ul id="sprites">
@@ -52,7 +61,7 @@ function retirerDescription() {
   </div>
 </template>
 
-<style scoped>
+<style scoped lang="scss">
 #sprites {
   display: flex;
   justify-content: space-around;
@@ -92,4 +101,25 @@ function retirerDescription() {
   width: 80vw !important;
 }
 
+#popupInfos {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: calc(100% - 70px);
+
+  > #icon-container{
+    width: 80px;
+    aspect-ratio: 1;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+
+    > img {
+      width: auto;
+      height: auto;
+      max-width: 80%;
+      max-height: 80%;
+    }
+  }
+}
 </style>
