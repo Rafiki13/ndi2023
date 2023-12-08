@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import QuizBlock from '@/components/QuizBlock.vue';
-import Earth from "@/views/Earth.vue";
+import Earth from "@/components/RotatingEarth.vue";
 import HealthBar from "@/components/HealthBar.vue";
 import { ref } from 'vue';
 
@@ -12,6 +12,7 @@ const currentScore = ref(0);
     <div class="game-view">
         <div class="left-side inventoryGUI_item">
             <HealthBar :score="currentScore" />
+            <Earth />
 
         </div>
         <div class="right-side inventoryGUI_item">
@@ -31,6 +32,11 @@ const currentScore = ref(0);
 
 .left-side {
     flex: 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    align-items: center;
+    padding: 45px;
 }
 
 .right-side {
