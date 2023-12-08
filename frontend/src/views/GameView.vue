@@ -2,10 +2,21 @@
 import QuizBlock from '@/components/QuizBlock.vue';
 import Earth from "@/components/RotatingEarth.vue";
 import HealthBar from "@/components/HealthBar.vue";
-import { ref } from 'vue';
+import { ref, watch } from 'vue';
 import EarthElementList from "@/components/EarthElementList.vue";
+import router from '@/router';
 
 const currentScore = ref(50);
+
+watch(currentScore, (newValue) => {
+    if (newValue <= 0) {
+        router.push('/gameover');
+    }
+});
+
+const finishGame = () => {
+    router.push('/gamecompleted');
+}
 
 </script>
 
@@ -17,7 +28,8 @@ const currentScore = ref(50);
             <earth-element-list></earth-element-list>
         </div>
         <div class="right-side inventoryGUI_item">
-            <QuizBlock @update-score="currentScore = Math.min(Math.max(currentScore + $event, 0), 100);" />
+            <QuizBlock @update-score="currentScore = Math.min(Math.max(currentScore + $event, 0), 100);"
+                @out-of-questions="finishGame" />
         </div>
     </div>
 </template>

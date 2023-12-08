@@ -3,7 +3,7 @@ import type { Answer, Question } from '@/types';
 import { computed, ref, type Ref } from 'vue';
 import questionsJSON from '@/assets/questions.json';
 
-const emit = defineEmits(['updateScore']);
+const emit = defineEmits(['updateScore', 'outOfQuestions']);
 
 const wasAnswerCorrect: Ref<boolean> = ref(false);
 const selectedAnswer: Ref<Answer | null> = ref(null);
@@ -25,6 +25,10 @@ const nextQuestion = () => {
     currentQuestionIndex.value++;
     selectedAnswer.value = null;
     wasAnswerCorrect.value = false;
+
+    if (currentQuestionIndex.value >= questions.value.length) {
+        emit('outOfQuestions');
+    }
 };
 
 </script>
