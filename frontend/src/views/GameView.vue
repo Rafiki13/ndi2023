@@ -1,10 +1,11 @@
 <script setup lang="ts">
 import QuizBlock from '@/components/QuizBlock.vue';
+import Earth from "@/views/Earth.vue";
+import HealthBar from "@/components/HealthBar.vue";
 import { ref } from 'vue';
 
 const currentScore = ref(0);
 
-import HealthBar from "@/components/HealthBar.vue";
 </script>
 
 <template>
