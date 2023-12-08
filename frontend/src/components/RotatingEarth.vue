@@ -10,9 +10,9 @@ interface Sprite {
 let id = 0;
 
 const sprites: Ref<Sprite[]> = ref([
-  {id: id++, nom: "Arbre", fichier: "tree.png", description: "arbre", height: 50, marginBottom: 3},
-  {id: id++, nom: "Usine", fichier: "factory.png", description: "usine", height: 50, marginBottom: 7.6},
-  {id: id++, nom: "Usine", fichier: "factory.png", description: "usine", height: 50, marginBottom: 0}
+  {id: id++, nom: "Arbre", fichier: "tree.png", description: "arbre", height: 50, marginBottom: 7.6},
+  {id: id++, nom: "Usine", fichier: "tree.png", description: "arbre", height: 50, marginBottom: 7.6},
+  {id: id++, nom: "Usine", fichier: "tree.png", description: "arbre", height: 50, marginBottom: 5}
 ]);
 
 </script>
@@ -24,7 +24,7 @@ const sprites: Ref<Sprite[]> = ref([
     <img v-for="sprite in sprites"
          :key="sprite.id"
          :src="`./src/assets/img/sprits/${sprite.fichier}`"
-         :style="`height: ${sprite.height}px; top: ${50 - (sprite.marginBottom * 4)}px; transform-origin: center ${125 + (sprite.marginBottom * 4)}px; transform: rotate(${(sprite.id * 360)/ id}deg);`"
+         :style="`height: ${sprite.height}px; top: ${50 - (sprite.marginBottom * 2)}px; transform-origin: center ${125 - (sprite.marginBottom * 2)}px; transform: translateX(-50%) rotate(${(sprite.id * 360)/ id}deg);`"
          class="sprite"
          />
   </div>
@@ -46,20 +46,17 @@ const sprites: Ref<Sprite[]> = ref([
   animation-name: rotate;
   animation-iteration-count: infinite;
   animation-direction: normal;
-  transform-origin: center;
+  transform-origin: center center;
   animation-timing-function: linear;
+  display:flex;
+  justify-content: center;
+  align-items: center;
 
-    position: relative;
-    width: 300px;
-    height: 300px;
+  position: relative;
+  width: 300px;
+  height: 300px;
   }
 
-#earth {
-  margin: 25%;
-  width: 50%;
-  aspect-ratio: 1;
-  image-rendering: pixelated;
-}
   #earth {
     margin: 50px;
     width: 250px;
