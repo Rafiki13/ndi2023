@@ -1,0 +1,295 @@
+{
+  "questions": [
+    {
+      "theme": "Sources d'énergie",
+      "content": "Quelle source d'énergie est la plus grande cause de mortalité par TWh produit ?",
+      "imageSrc": "",
+      "pointsIfCorrect": 10,
+      "pointsIfWrong": -10,
+      "possibleAnswers": [
+        {
+          "content": "Le nucléaire",
+          "isCorrect": false,
+          "textIfSelected": "Incorrect! La bonne réponse est le charbon, tuant 24.6 personnes par TWh produit. Le pétrole est proche, tuant 18.4 personnes par TWh produit. Le nucléaire, quant à lui, tue 0.03 personnes par TWh produit, et est relativement beaucoup plus sûr."
+        },
+        {
+          "content": "Le charbon",
+          "isCorrect": true,
+          "textIfSelected": "Correct! Le charbon tue 24.6 personnes par TWh produit. Le pétrole est proche, tuant 18.4 personnes par TWh produit. Le nucléaire, quant à lui, tue 0.03 personnes par TWh produit, et est relativement beaucoup plus sûr."
+        },
+        {
+          "content": "Le gaz",
+          "isCorrect": false,
+          "textIfSelected": "Incorrect! La bonne réponse est le charbon, tuant 24.6 personnes par TWh produit. Le pétrole est proche, tuant 18.4 personnes par TWh produit. Le gaz, quant à lui, tue 2.8 personnes par TWh produit, tandis que le nucléaire tue 0.03 personnes par TWh produit, et est relativement beaucoup plus sûr."
+        },
+        {
+          "content": "Le pétrole",
+          "isCorrect": false,
+          "textIfSelected": "Presque! La bonne réponse est le charbon, tuant 24.6 personnes par TWh produit. Le pétrole est proche, tuant 18.4 personnes par TWh produit. Le nucléaire, quant à lui, tue 0.03 personnes par TWh produit, et est relativement beaucoup plus sûr."
+        }
+      ]
+    },
+    {
+      "theme": "Solutions pour le climat",
+      "content": "La capture du carbone est-elle une solution pour le climat ?",
+      "imageSrc": "",
+      "pointsIfCorrect": 10,
+      "pointsIfWrong": -10,
+      "possibleAnswers": [
+        {
+          "content": "Oui",
+          "isCorrect": false,
+          "textIfSelected": "Incorrect! La capture du carbone est une solution inadéquate pour le climat. Les systèmes de capture du carbone sont très coûteux, très énergivores (donc émetteurs de CO2), et ne peuvent pas être déployés à grande échelle, notamment pour les transports."
+        },
+        {
+          "content": "Non",
+          "isCorrect": true,
+          "textIfSelected": "Correct! La capture du carbone est une solution inadéquate pour le climat. Les systèmes de capture du carbone sont très coûteux, très énergivores (donc émetteurs de CO2), et ne peuvent pas être déployés à grande échelle, notamment pour les transports."
+        }
+      ]
+    },
+    {
+      "theme": "Solutions pour le climat",
+
+      "content": "Ce sont les petits gestes quotidiens qui peuvent nous sortir de la crise écologique",
+
+      "imageSrc": "",
+
+      "pointsIfCorrect": 10,
+
+      "pointsIfWrong": -10,
+
+      "possibleAnswers": [
+        {
+          "content": "Vrai",
+
+          "isCorrect": false,
+
+          "textIfSelected": "Malheureusement, non. On dit souvent que si chacun de nous faisait un geste pour la planète, multiplié par 8 milliards d’individus cela aurait un impact positif global. Ce type de raisonnement pousse à penser que l’on pourrait « changer le monde » en se contentant de petits gestes écologiques. Ce n'est pas malheureusement pas le cas, un changement d'ordre sociétal est nécessaire, et une transformation de nos pratiques agricoles, industrielles et énergétiques."
+        },
+
+        {
+          "content": "Faux",
+
+          "isCorrect": true,
+
+          "textIfSelected": "Correct! On dit souvent que si chacun de nous faisait un geste pour la planète, multiplié par 8 milliards d’individus cela aurait un impact positif global. Ce type de raisonnement pousse à penser que l’on pourrait « changer le monde » en se contentant de petits gestes écologiques. Ce n'est pas malheureusement pas le cas, un changement d'ordre sociétal est nécessaire, et une transformation de nos pratiques agricoles, industrielles et énergétiques."
+        }
+      ]
+    },
+    {
+      "theme": "Moyens de transport",
+
+      "content": "Quel moyen de transport a un impact peu important sur le climat ?",
+
+      "imageSrc": "",
+
+      "pointsIfCorrect": 10,
+
+      "pointsIfWrong": -10,
+
+      "possibleAnswers": [
+        {
+          "content": "Voiture",
+
+          "isCorrect": false,
+
+          "textIfSelected": "Non, la voiture est un moyen de transport très polluant, et qui est responsable de 20% des émissions de gaz à effet de serre en France. La voiture électrique n'est pas non plus une solution, car l'électricité consommée n'est pas forcément verte, et la fabrication des batteries est très polluante."
+        },
+
+        {
+          "content": "Voiture électrique",
+
+          "isCorrect": false,
+
+          "textIfSelected": "Non, la voiture électrique n'est pas un remplacement adéquat à la voiture thermique, car l'électricité consommée n'est pas forcément verte, et la fabrication des batteries est très polluante."
+        },
+
+        {
+          "content": "Transports en commun",
+
+          "isCorrect": true,
+
+          "textIfSelected": "En effet, les transports en commun sont un moyen de transport peu polluant, qui permet de réduire les émissions de gaz à effet de serre."
+        },
+
+        {
+          "content": "Vélo",
+
+          "isCorrect": true,
+
+          "textIfSelected": "En effet, le vélo est un moyen de transport peu polluant, qui permet de réduire les émissions de gaz à effet de serre. Il est cependant impossible à utiliser dans certaines situations, et est très bien complémenté par les transports en commun."
+        }
+      ]
+    },
+    {
+      "theme": "Moyens de transport",
+
+      "content": "Lequel du diesel ou de l'essence est le plus polluant",
+
+      "imageSrc": "",
+
+      "pointsIfCorrect": 10,
+
+      "pointsIfWrong": -10,
+
+      "possibleAnswers": [
+        {
+          "content": "Diesel",
+
+          "isCorrect": true,
+
+          "textIfSelected": "Le diesel dégage des particules fines cancérigènes. Un moteur diesel est au final plus nocif pour la santé qu'un équivalent essence."
+        },
+
+        {
+          "content": "Essence",
+
+          "isCorrect": false,
+
+          "textIfSelected": "Le diesel dégage des particules fines cancérigènes. Un moteur diesel est au final plus nocif pour la santé qu'un équivalent essence."
+        }
+      ]
+    },
+    {
+      "theme": "Recyclage",
+
+      "content": "Faut-il laver les boites de conserve ou les vider suffisemment suffit-il à permettre leur recyclage",
+
+      "imageSrc": "",
+
+      "pointsIfCorrect": 10,
+
+      "pointsIfWrong": -10,
+
+      "possibleAnswers": [
+        {
+          "content": "Il faut les nettoyer complètement",
+
+          "isCorrect": false,
+
+          "textIfSelected": "Laver les conserves, c'est gaspiller de l'eau. Bien vider les restes suffit largement car les traces qui subsistent ne résisteront pas à la chaleur des fours lors du recyclage."
+        },
+
+        {
+          "content": "Il faut enlever le plus gros",
+
+          "isCorrect": true,
+
+          "textIfSelected": "Laver les conserves, c'est gaspiller de l'eau. Bien vider les restes suffit largement car les traces qui subsistent ne résisteront pas à la chaleur des fours lors du recyclage."
+        }
+      ]
+    },
+    {
+      "theme": "Production responsable",
+
+      "content": "Le coton étant un produit naturel, sa culture est-elle écologique ?",
+
+      "imageSrc": "",
+
+      "pointsIfCorrect": 10,
+
+      "pointsIfWrong": -10,
+
+      "possibleAnswers": [
+        {
+          "content": "Oui",
+
+          "isCorrect": false,
+
+          "textIfSelected": "Un quart de la production mondiale des fibres textiles provient du coton. Sa culture nécessite beaucoup d’eau, de soleil et de pesticides. Cela entraîne une pollution agricole et un risque pour la santé des cultivateurs."
+        },
+
+        {
+          "content": "Non",
+
+          "isCorrect": true,
+
+          "textIfSelected": "Un quart de la production mondiale des fibres textiles provient du coton. Sa culture nécessite beaucoup d’eau, de soleil et de pesticides. Cela entraîne une pollution agricole et un risque pour la santé des cultivateurs."
+        }
+      ]
+    },
+    {
+      "theme": "Habitation",
+
+      "content": "Qu'est ce qui est le moins polluant entre les gratte-ciels ou les pavillons",
+
+      "imageSrc": "",
+
+      "pointsIfCorrect": 10,
+
+      "pointsIfWrong": -10,
+
+      "possibleAnswers": [
+        {
+          "content": "Gratte-ciels",
+
+          "isCorrect": true,
+
+          "textIfSelected": "Les gratte-ciels, en proportion, ont un moindre impact sur l'environnement que les zones pavillonnaires ou l'habitat dispersé."
+        },
+
+        {
+          "content": "Pavillons résidentiel",
+
+          "isCorrect": false,
+
+          "textIfSelected": "Les gratte-ciels, en proportion, ont un moindre impact sur l'environnement que les zones pavillonnaires ou l'habitat dispersé."
+        },
+
+        {
+          "content": "Ils sont équivalent",
+
+          "isCorrect": false,
+
+          "textIfSelected": "Les gratte-ciels, en proportion, ont un moindre impact sur l'environnement que les zones pavillonnaires ou l'habitat dispersé."
+        }
+      ]
+    },
+    {
+      "theme": "Recyclage",
+
+      "content": "Lequel de ces papiers n'est pas recyclable",
+
+      "imageSrc": "",
+
+      "pointsIfCorrect": 10,
+
+      "pointsIfWrong": -10,
+
+      "possibleAnswers": [
+        {
+          "content": "Enveloppes avec fenêtre en plastique",
+
+          "isCorrect": false,
+
+          "textIfSelected": "Tous les papiers peuvent être recyclés plusieurs fois."
+        },
+
+        {
+          "content": "Papiers avec des agrafes",
+
+          "isCorrect": false,
+
+          "textIfSelected": "Tous les papiers peuvent être recyclés plusieurs fois."
+        },
+
+        {
+          "content": "Cahiers à spirale",
+
+          "isCorrect": false,
+
+          "textIfSelected": "Tous les papiers peuvent être recyclés plusieurs fois."
+        },
+
+        {
+          "content": "Aucun",
+
+          "isCorrect": true,
+
+          "textIfSelected": "Tous les papiers peuvent être recyclés plusieurs fois."
+        }
+      ]
+    }
+  ]
+}

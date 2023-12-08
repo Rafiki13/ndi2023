@@ -5,7 +5,7 @@ import HealthBar from "@/components/HealthBar.vue";
 import { ref } from 'vue';
 import EarthElementList from "@/components/EarthElementList.vue";
 
-const currentScore = ref(0);
+const currentScore = ref(50);
 
 </script>
 
