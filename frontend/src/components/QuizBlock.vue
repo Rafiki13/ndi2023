@@ -15,8 +15,8 @@ const question = ref<Question>({
     content: 'What is the airspeed velocity of an unladen swallow?',
     imageSrc: 'https://unsplash.com/photos/8wTPqxlnKM4/download?force=true&w=1920',
     possibleAnswers: [answer1, answer2, answer3],
-    pointsIfCorrect: 200,
-    pointsIfWrong: -100,
+    pointsIfCorrect: 10,
+    pointsIfWrong: -10,
     theme: 'general',
 });
 

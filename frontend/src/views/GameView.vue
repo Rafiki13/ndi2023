@@ -4,16 +4,17 @@ import { ref } from 'vue';
 
 const currentScore = ref(0);
 
+import HealthBar from "@/components/HealthBar.vue";
 </script>
 
 <template>
     <div class="game-view">
         <div class="left-side inventoryGUI_item">
-            <h1>Score: {{ currentScore }}</h1>
+            <HealthBar :score="currentScore" />
 
         </div>
         <div class="right-side inventoryGUI_item">
-            <QuizBlock @update-score="currentScore += $event" />
+            <QuizBlock @update-score="currentScore = Math.min(Math.max(currentScore + $event, 0), 100);" />
         </div>
     </div>
 </template>
