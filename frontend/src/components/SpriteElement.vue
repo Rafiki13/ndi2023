@@ -11,7 +11,7 @@ defineProps<{
 </script>
 
 <template>
-   <img @click="$emit('afficherDescription')" :src="`./src/assets/img/${modelValue}`" alt="">
+   <img @click="$emit('afficherDescription')" :src="`./src/assets/img/sprits/${modelValue}`" alt="">
 </template>
 
 <style scoped>

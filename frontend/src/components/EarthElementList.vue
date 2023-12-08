@@ -50,7 +50,7 @@ function quitFullScreen() {
         <img src="../assets/img/minecraftGUI/cross.png" alt="close description" @click="retirerDescription" class="cross"/>
         <div>
           <div id="icon-container" class="inventoryGUI_item">
-            <img :src="'./src/assets/img/' + actualSprite.fichier" alt="">
+            <img :src="'./src/assets/img/sprits/' + actualSprite.fichier" alt="">
           </div>
           <h2>{{ actualSprite.nom }}</h2>
         </div>
@@ -80,7 +80,7 @@ function quitFullScreen() {
 }
 
 #popup {
-  background-image: url("./src/assets/img/background.png");
+  background-image: url("./src/assets/img/sprits/background.png");
   background-repeat: repeat-x;
   background-position: center center;
   background-size: contain;
