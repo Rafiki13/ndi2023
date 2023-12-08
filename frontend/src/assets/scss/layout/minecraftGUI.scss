@@ -55,3 +55,10 @@
   color:white;
   cursor: pointer;
 }
+
+.cross {
+  aspect-ratio: 1;
+  image-rendering: pixelated;
+  width: 20px;
+  cursor: pointer;
+}
