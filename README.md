@@ -10,4 +10,4 @@ Sous la terre se trouve un "coupe" de la terre actuelle qu'il a. Le joueur peut 
 
 Le code de ce sie a été fait en .json, Vue.js, HTML et CSS.
 
-URL du site :
+URL du site : https://webinfo.iutmontp.univ-montp2.fr/~renuccis/dist
