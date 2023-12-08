@@ -27,8 +27,8 @@
     transform-origin: center;
     animation-timing-function: linear;
 
-    width: 300px;
-    height: 300px;
+    width: 500px;
+    height: 500px;
   }
 
   #earth {
