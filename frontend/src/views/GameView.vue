@@ -14,7 +14,7 @@ const currentScore = ref(50);
         <div class="left-side inventoryGUI_item">
             <HealthBar :score="currentScore" />
             <Earth />
-            <earth-element-list></earth-element-list>
+            <!-- <earth-element-list></earth-element-list> -->
         </div>
         <div class="right-side inventoryGUI_item">
             <QuizBlock @update-score="currentScore = Math.min(Math.max(currentScore + $event, 0), 100);" />
@@ -28,14 +28,15 @@ const currentScore = ref(50);
     flex-direction: row;
     justify-content: space-between;
     align-items: stretch;
-    height: 100vh;
+    min-height: 100vh;
+    overflow: hidden;
 }
 
 .left-side {
     flex: 3;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     padding: 10px;
 }
