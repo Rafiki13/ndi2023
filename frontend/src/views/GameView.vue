@@ -4,6 +4,7 @@ import { ref } from 'vue';
 
 const currentScore = ref(0);
 
+import HealthBar from "@/views/HealthBar.vue";
 </script>
 
 <template>
