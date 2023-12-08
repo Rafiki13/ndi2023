@@ -5,7 +5,7 @@ import HealthBar from "@/components/HealthBar.vue";
 import { ref } from 'vue';
 import EarthElementList from "@/components/EarthElementList.vue";
 
-const currentScore = ref(0);
+const currentScore = ref(50);
 
 </script>
 
@@ -28,14 +28,15 @@ const currentScore = ref(0);
     flex-direction: row;
     justify-content: space-between;
     align-items: stretch;
-    height: 100vh;
+    min-height: 100vh;
+    overflow: hidden;
 }
 
 .left-side {
     flex: 3;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     padding: 10px;
 }
