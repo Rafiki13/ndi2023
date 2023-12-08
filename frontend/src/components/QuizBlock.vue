@@ -59,11 +59,11 @@ const nextQuestion = () => {
             </div>
 
             <div v-else class="inventoryGUI_item text-after-answer" :class="wasAnswerCorrect ? 'correct' : 'wrong'">
-                <h2 v-if="wasAnswerCorrect">Correct!</h2>
-                <h2 v-else>Wrong!</h2>
+                <h2 v-if="wasAnswerCorrect">Correcte !</h2>
+                <h2 v-else>Incorrecte</h2>
                 <p>{{ selectedAnswer?.textIfSelected }}</p>
 
-                <div class="next-question-button inventoryGUI" @click="nextQuestion">Next question</div>
+                <div class="next-question-button inventoryGUI" @click="nextQuestion">Question suivante</div>
             </div>
         </div>
     </div>
