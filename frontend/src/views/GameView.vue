@@ -8,15 +8,8 @@ import router from '@/router';
 import {type RotatingEarthSprite, type EarthListSprite} from '@/types'
 
 
-const spritesRotatingEarth: Ref<RotatingEarthSprite[]> = ref([
-  {id: 0, nom: "Arbre", fichier: "tree.png", description: "arbre", height: 50, marginBottom: 7.6},
-  {id: 1, nom: "Usine", fichier: "tree.png", description: "arbre", height: 50, marginBottom: 7.6},
-  {id: 2, nom: "Usine", fichier: "tree.png", description: "arbre", height: 50, marginBottom: 5}
-]);
-const spritesEarthList: Ref<EarthListSprite[]> = ref([
-  {id: 0, nom: "Arbre", fichier: "tree.png", description: "arbre", height: 50, marginBottom: 3},
-  {id: 1, nom: "Usine", fichier: "tree.png", description: "usine", height: 50, marginBottom: 7.6}
-]);
+const spritesRotatingEarth: Ref<RotatingEarthSprite[]> = ref([]);
+const spritesEarthList: Ref<EarthListSprite[]> = ref([]);
 
 const currentScore = ref(50);
 
@@ -30,6 +23,19 @@ const finishGame = () => {
     router.push('/gamecompleted');
 }
 
+let id = 0;
+
+function addSprite(fichier: string, nom: string) {
+  spritesEarthList.value.push({
+    id: id, nom: nom, fichier: fichier, description: "", height: 50, marginBottom: 3
+  });
+  spritesRotatingEarth.value.push({
+  id: id, fichier: fichier, height: 50, marginBottom: 5
+  });
+
+  id++
+}
+
 </script>
 
 <template>
@@ -41,7 +47,7 @@ const finishGame = () => {
         </div>
         <div class="right-side inventoryGUI_item">
             <QuizBlock @update-score="currentScore = Math.min(Math.max(currentScore + $event, 0), 100);"
-                @out-of-questions="finishGame" />
+                @out-of-questions="finishGame" @emitNewSprite="(v1, v2) => addSprite(v1, v2)"/>
         </div>
     </div>
 </template>
