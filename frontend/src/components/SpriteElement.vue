@@ -16,8 +16,7 @@ defineProps<{
 
 <style scoped>
   img {
-    height: 80px;
-    width: 80px;
     cursor: pointer;
+    height: 100%;
   }
 </style>

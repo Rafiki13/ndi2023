@@ -7,8 +7,8 @@ let id = 0;
 
 // TODO : automatiser les sprites à utiliser lors des réponses de l'utilisateur
 const sprites: Ref<Sprite[]> = ref([
-  {id: id++, nom: "Arbre", fichier: "tree.png", description: "arbre"},
-  {id: id++, nom: "Usine", fichier: "factory.png", description: "usine"}
+  {id: id++, nom: "Arbre", fichier: "tree.png", description: "arbre", height: 50, marginBottom: 3},
+  {id: id++, nom: "Usine", fichier: "factory.png", description: "usine", height: 50, marginBottom:  7.6}
 ]);
 
 interface Sprite {
@@ -16,6 +16,8 @@ interface Sprite {
   nom: string;
   fichier: string;
   description: string;
+  height: number;
+  marginBottom: number;
 }
 
 const actualSprite = ref();
@@ -57,7 +59,7 @@ function quitFullScreen() {
       </div>
 
       <ul id="sprites">
-        <li v-for="sprite in sprites" :key="sprite.id">
+        <li v-for="sprite in sprites" :key="sprite.id" :style="`height: ${sprite.height}%; margin-bottom: ${sprite.marginBottom}%;`">
           <SpriteElement v-model="sprite.fichier" @afficher-description="afficherDescription(sprite.id)"/>
         </li>
       </ul>
